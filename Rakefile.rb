@@ -1,5 +1,5 @@
 task :default => :rspec
 
 task :rspec do
-  system "rspec spec"
+  system "rspec spec -f doc"
 end

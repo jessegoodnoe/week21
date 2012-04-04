@@ -1,16 +1,11 @@
-module MyStuff
-  # alias_method "orig_empty?".to_sym, "empty?".to_sym
-
+module MyCode
+  
   def empty?
-    if (true)
-      warn "Monkeys!"
-      self.gsub(/\s/, '').size <= 0
-    else
-      # self.orig_empty?
-    end
-  end  
+    warn "Monkey patched!"
+  end
+  
 end
 
 class String
-  include MyStuff
+  include MyCode
 end
