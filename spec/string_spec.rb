@@ -1,30 +1,14 @@
 require 'spec_helper'
 
 describe String do
-  it "is true" do
-     true.should be_true
-     "xyz".another
-      puts String.superclass
-       puts String.superclass.superclass
-        puts String.superclass.superclass.superclass
-  end
-
-  describe "empty?" do
-    it "is true for no characters" do
-      "".another
-      "".should be_empty
+  describe :ruby_case do
+    it 'downcases a single word' do
+      'Ruby'.ruby_case.should =='ruby'
     end
     
-    it "is false for some characters" do
-      "false".should_not be_empty
+    it 'inserts _ before caps and downcases' do
+      'RubyCaseMe'.ruby_case.should == 'ruby_case_me'
     end
-    
-    it "is true for whitespace only" do
-      "    ".should be_empty
-    end
-    
-    it "is false for whitespace WITH non-whitespace" do
-      " character ".should_not be_empty
-    end 
+      
   end
 end

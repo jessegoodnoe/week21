@@ -10,5 +10,4 @@ RSpec.configure do |config|
   config.filter_run :focus
 end
 
-# require_relative '../lib/string'
-require_relative '../lib/my_code'
+require_relative '../lib/my_extensions'
